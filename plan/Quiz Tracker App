@@ -83,11 +83,11 @@ Components:
 Date
 Topic
 ScoreBar
+Delete Button
 
 Behaviour:
 -% score for that test should be related to width of that ScoreBar
+-Should delete the score from the database when dletebutton clicked
 
 States:
 Score
-
-
