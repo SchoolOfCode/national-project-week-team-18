@@ -1,0 +1,29 @@
+Colors:
+Primary color: #2B2D42
+Secondary color: #4C8CBD
+Tertiary color: #E6EDF0
+Accent Color: #EF233C
+Background Color: #FFF
+
+<NavBar> :
+components:
+logo
+AddScore Button
+UserIcon
+
+Behaviour:
+-On Click of AddScore it should reveal the SubmitForm components
+
+States:
+-SubmitFormToggle
+
+<SubmitForm> :
+Components:
+TopicInput
+ScoreInput
+OutOfInput
+SubmitButton
+
+Behaviour:
+-On Click of submit button it should add that score to the database with the topic and date
+-On Click of submit button it should hide the form and clear inputs
