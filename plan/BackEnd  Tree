@@ -1,0 +1,29 @@
+DATABASE
+Behaviour:
+Should have a table with users scores.
+   SCore Table{
+       id: PRIMARY KEY,
+       date: INT
+       topic: TEXT, 
+       score: INT,
+       out of : INT
+   }
+
+   DB CONNECTION
+   Behaviour:
+   Should have dbhost, port user_id and password.
+   DB_postgresID: Heroku
+   DB_Host: localhost,
+   DB_port : Heroku port
+   DB_DATABASE: username.
+
+write a script to create a table
+   CREATE TABLE
+
+should have a folder for the crud api request.
+   CRUD API
+   Should make a POST request
+   should make a GET request
+   should be able to DELETE user's score.
+
+
