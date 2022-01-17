@@ -27,3 +27,65 @@ SubmitButton
 Behaviour:
 -On Click of submit button it should add that score to the database with the topic and date
 -On Click of submit button it should hide the form and clear inputs
+
+States:
+Topic
+Score
+OutOf
+Note: Might want to put them into one state as an object
+
+<Scores> :
+Components:
+ScoresHeader
+ScoresTable
+
+Behaviour:
+take in the scores database
+
+States:
+scores Database
+
+<footer>:
+Components:
+Dialogue
+Links
+
+Behaviour:
+-Can click on links
+-Can view each persons gitHub
+
+states:
+
+<ScoresHeader>:
+Components:
+AverageScore
+Header
+
+Behaviour:
+Display average score and a dialogue
+
+states:
+averageScore
+
+<ScoresTabel>:
+Components:
+Column Headers
+GraphScore
+
+Behaviour:
+Display indv scores
+
+State:
+scores Database passed down
+
+<GraphScore>:
+Components:
+Date
+Topic
+ScoreBar
+
+Behaviour:
+-% score for that test should be related to width of that ScoreBar
+
+States:
+Score
