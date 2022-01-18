@@ -49,7 +49,8 @@ function SubmitForm() {
           handleOutOf(e);
         }}
       ></input>
-      <button type="submit" onClick={handleClick}>
+
+      <button type="submit" class="submit-score" onClick={handleClick}>
         Submit Score
       </button>
     </div>

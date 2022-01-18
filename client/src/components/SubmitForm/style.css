@@ -1,0 +1,21 @@
+/* .topic {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.score {
+    left: 0;
+    position: absolute;
+    right: 40px;
+}
+
+.outOf {
+    position: absolute;
+    right: 0;
+    width: 40px;
+} */
+
+.submit-score{
+  color: blue;
+}
