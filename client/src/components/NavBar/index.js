@@ -1,3 +1,4 @@
+import "./style.css";
 import logo from "../../Logo.png";
 import UserIcon from "../../UserIcon.png";
 
@@ -6,13 +7,14 @@ function NavBar() {
     console.log("Add score button pressed");
   }
   return (
-    <div>
-    <img src= {logo} alt = "logo"/>
-    <button onClick={addScore}>+Add Score</button>
-    <img src ={UserIcon} alt ="User Icon" />
+    <div className="navBar">
+      <img src={logo} alt="logo" class="logo" />
+      <button onClick={addScore} class="add-score-button right">
+        +Add Score
+      </button>
+      <img src={UserIcon} alt="User Icon" class="usericon right" />
     </div>
   );
 }
-
 
 export default NavBar;
