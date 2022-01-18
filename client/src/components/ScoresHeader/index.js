@@ -1,13 +1,31 @@
-import {useState} from "react";
+import { useState, useEffect } from "react";
 
-
-function ScoresHeader() {
+function ScoresHeader({ scoresArr }) {
   const [averageScore, setAverageScore] = useState(0);
-   return <div>
-    <h1> Your Scores </h1>
-    <p> Hey there, here are your scores. Your average score is {averageScore}%. You're doing great, keep it up!</p>
 
-  </div>;
+  useEffect(() => {
+    setAverageScore(() => {
+      console.log(scoresArr);
+      let arr = scoresArr.map((obj) => {
+        return obj.percentageScore;
+      });
+      let sum = arr.reduce((acc, cur) => {
+        return acc + cur;
+      }, 0);
+      console.log(arr, sum);
+      return Math.floor(sum / arr.length);
+    });
+  }, [scoresArr]);
+
+  return (
+    <div>
+      <h1> Your Scores </h1>
+      <p>
+        Hey there, here are your scores. Your average score is {averageScore}%.
+        You're doing great, keep it up!
+      </p>
+    </div>
+  );
 }
 
 export default ScoresHeader;
