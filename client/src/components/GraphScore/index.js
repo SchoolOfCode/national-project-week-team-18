@@ -1,3 +1,5 @@
+import "./style.css";
+
 function GraphScore({ date, topic, percentageScore }) {
   let divWidth = percentageScore * 0.5;
 
