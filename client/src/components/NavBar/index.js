@@ -8,11 +8,11 @@ function NavBar() {
   }
   return (
     <div className="navBar">
-      <img src={logo} alt="logo" class="logo" />
-      <button onClick={addScore} class="add-score-button right">
-        +Add Score
+      <img src={logo} alt="logo" className="logo" />
+      <button onClick={addScore} className="add-score-button right">
+        Add Score
       </button>
-      <img src={UserIcon} alt="User Icon" class="usericon right" />
+      <img src={UserIcon} alt="User Icon" className="usericon right" />
     </div>
   );
 }

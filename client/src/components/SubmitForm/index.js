@@ -25,26 +25,28 @@ function SubmitForm() {
   }
 
   return (
-    <div>
-      <label for="topic">Topic:</label>
+    <div class="submit-form">
+      <label for="topic" class="left">
+        Topic:
+      </label>
       <input
-        id="topic"
+        class="input-boxes left"
         type="text"
         onChange={(e) => {
           handleTopic(e);
         }}
       ></input>
-      <label for="Score">Score:</label>
+      <label for="Score"> Score:</label>
       <input
-        id="Score"
+        class="input-boxes score-box"
         type="text"
         onChange={(e) => {
           handleScore(e);
         }}
       ></input>
-      <label for="OutOf">/</label>
+      <label for="OutOf"> out of </label>
       <input
-        id="OutOf"
+        class="input-boxes score-box"
         type="text"
         onChange={(e) => {
           handleOutOf(e);

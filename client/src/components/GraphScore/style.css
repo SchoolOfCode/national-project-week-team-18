@@ -1,0 +1,31 @@
+.graph-score {
+  display: grid;
+  grid-template-columns: 2fr 2fr 8fr 1fr;
+}
+
+.bar {
+  position: relative;
+  top: 15px;
+}
+
+.delete-button {
+  position: relative;
+  top: 15px;
+  left: 60px;
+  height: 30px;
+  width: 30px;
+  background-color: #ef233c;
+  color: white;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 0 3px #999;
+}
+
+.delete-button:hover {
+  background-color: #e96574;
+}
+
+.delete-button:active {
+  box-shadow: 0 1px #999;
+  transform: translateY(2px);
+}

@@ -1,21 +1,47 @@
-/* .topic {
-    height: 100%;
-    position: relative;
-    width: 100%;
+.submit-form {
+  display: flex;
+  flex-direction: row;
+  background-color: #e6edf0;
+  border-style: none;
+  justify-content: center;
+  height: 40px;
+  width: 50%;
+  margin: auto;
+  padding-top: 20px;
+  border: 3px solid #2b2d42;
+  border-top: none;
 }
 
-.score {
-    left: 0;
-    position: absolute;
-    right: 40px;
+.input-boxes {
+  height: 15px;
 }
 
-.outOf {
-    position: absolute;
-    right: 0;
-    width: 40px;
-} */
+.submit-score {
+  position: relative;
+  background-color: #4c8cbd;
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 0 5px #999;
+  height: 30px;
+  bottom: 7px;
+  left: 50px;
+}
 
-.submit-score{
-  color: blue;
+.left {
+  position: relative;
+  right: 50px;
+}
+
+.submit-score:hover {
+  background-color: #7eb8e4;
+}
+
+.submit-score:active {
+  box-shadow: 0 1px #999;
+  transform: translateY(4px);
+}
+
+.score-box {
+  width: 30px;
 }

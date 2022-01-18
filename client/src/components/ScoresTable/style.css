@@ -1,0 +1,24 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 8fr 1fr;
+  grid-template-rows: 30px 30px;
+}
+
+.scores {
+  position: relative;
+  top: 30px;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* .light {
+  background-color: #e6edf0;
+}
+
+.dark {
+  background-color: #d2e3eb;
+} */

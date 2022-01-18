@@ -3,17 +3,25 @@ import "./style.css";
 function GraphScore({ date, topic, percentageScore }) {
   let divWidth = percentageScore * 0.5;
 
+  function handleClick() {
+    console.log("You clicked delete");
+  }
+
   return (
-    <div>
-      <p>{date}</p>
-      <p>{topic}</p>
+    <div class="graph-score">
+      <p class="light">{date}</p>
+      <p class="dark">{topic}</p>
       <div
+        class="bar light"
         style={{
           width: `${divWidth}vw`,
           height: "20px",
-          backgroundColor: "blue",
+          backgroundColor: {},
         }}
       ></div>
+      <button class="delete-button dark" onClick={handleClick}>
+        X
+      </button>
     </div>
   );
 }
