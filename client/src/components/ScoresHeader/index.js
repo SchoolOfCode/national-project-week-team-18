@@ -1,3 +1,5 @@
+import "./style.css";
+
 import { useState, useEffect } from "react";
 
 function ScoresHeader({ scoresArr }) {

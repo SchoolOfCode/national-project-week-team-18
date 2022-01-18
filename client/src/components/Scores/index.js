@@ -1,5 +1,6 @@
 import ScoresHeader from "../ScoresHeader";
 import ScoresTable from "../ScoresTable";
+import "./style.css";
 
 const scoresArr = [
   {

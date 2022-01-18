@@ -1,3 +1,4 @@
+import "./style.css";
 import GraphScore from "../GraphScore";
 
 function ScoresTable({ scoresArr }) {

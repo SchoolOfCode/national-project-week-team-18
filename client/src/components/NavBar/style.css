@@ -1,0 +1,41 @@
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 3px solid #2b2d42;
+  background-color: #e6edf0;
+}
+
+.right {
+  padding: 10px;
+}
+
+.add-score-button {
+  margin-left: 80%;
+  height: 40px;
+  margin-top: 0.7%;
+  background-color: #4c8cbd;
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 0 5px #999;
+}
+
+.add-score-button:hover {
+  background-color: #7eb8e4;
+}
+
+.add-score-button:active {
+  box-shadow: 0 1px #999;
+  transform: translateY(4px);
+}
+
+.usericon {
+  width: auto;
+  height: 50px;
+}
+
+.logo {
+  width: auto;
+  height: 75px;
+}
