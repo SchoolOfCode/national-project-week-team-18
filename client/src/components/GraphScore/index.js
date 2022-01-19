@@ -6,7 +6,7 @@ function GraphScore({ date, topic, percentageScore, id, handleRenderScores }) {
   async function deleteItem() {
     console.log("id", id);
     const response = await fetch(
-      `https://quiztrackerapp.herokuapp.com/scores/${id}`,
+      `${process.env.REACT_APP_API_URL}/scores/${id}`,
       {
         method: "DELETE",
         headers: {
