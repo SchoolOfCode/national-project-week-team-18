@@ -1,7 +1,7 @@
 import "./style.css";
 import { useState } from "react";
 
-function SubmitForm() {
+function SubmitForm({ handleAddScore }) {
   const [score, setScore] = useState(0);
   const [outOf, setOutOf] = useState(0);
   const [topic, setTopic] = useState("");
@@ -59,7 +59,14 @@ function SubmitForm() {
         }}
       ></input>
 
-      <button type="submit" class="submit-score" onClick={handleClick}>
+      <button
+        type="submit"
+        class="submit-score"
+        onClick={() => {
+          handleClick();
+          handleAddScore();
+        }}
+      >
         Submit Score
       </button>
     </div>
