@@ -7,14 +7,14 @@ function ScoresHeader({ scoresArr }) {
 
   useEffect(() => {
     setAverageScore(() => {
-      console.log(scoresArr);
+      //console.log(scoresArr);
       let arr = scoresArr.map((obj) => {
         return obj.percentageScore;
       });
       let sum = arr.reduce((acc, cur) => {
         return acc + cur;
       }, 0);
-      console.log(arr, sum);
+      //console.log(arr, sum);
       return Math.floor(sum / arr.length);
     });
   }, [scoresArr]);

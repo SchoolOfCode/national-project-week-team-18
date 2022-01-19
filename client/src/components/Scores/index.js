@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react'
 import ScoresHeader from "../ScoresHeader";
 import ScoresTable from "../ScoresTable";
 import "./style.css";
@@ -118,6 +119,23 @@ const scoresArr = [
 ];
 
 function Scores() {
+  const [scores, setscores] = useState({})
+  //getScores function
+  const getScores = async() =>{
+    try {
+      const res = await fetch("https://quiztrackerapp.herokuapp.com/scores")
+      const scoresData = await res.json()
+      setscores(scoresData)
+    } catch (err) {
+      console.error(err.message)
+    }
+  }
+  console.log(scores)
+
+  useEffect(() =>{
+    getScores();
+  }, [])
+
   return (
     <div>
       <ScoresHeader scoresArr={scoresArr} />
