@@ -8,8 +8,14 @@ function SubmitForm() {
   const [submit, setSubmit] = useState({ Topic: "", Score: 0, OutOf: 0 });
 
   function handleClick() {
-    setSubmit({ Topic: topic, Score: score, OutOf: outOf });
+    setSubmit({
+      topic: topic,
+      score: score,
+      outOf: outOf,
+      percentage: score / outOf,
+    });
     return console.log(submit);
+    //post results to db
   }
 
   function handleTopic(e) {
