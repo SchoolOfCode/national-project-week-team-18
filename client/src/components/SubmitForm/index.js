@@ -5,13 +5,8 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
   const [score, setScore] = useState(0);
   const [outOf, setOutOf] = useState(0);
   const [topic, setTopic] = useState("");
-  const [percentage, setPercentage] = useState(0);
 
   async function handleClick() {
-    setPercentage(score / outOf);
-    handlePost();
-  }
-  async function handlePost() {
     console.log("post called");
     try {
       const addScore = { topic, score, outOf, percentage };
@@ -40,28 +35,28 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
   }
 
   return (
-    <div class="submit-form">
-      <label for="topic" class="left">
+    <div className="submit-form">
+      <label htmlFor="topic" className="left">
         Topic:
       </label>
       <input
-        class="input-boxes left"
+        className="input-boxes left"
         type="text"
         onChange={(e) => {
           handleTopic(e);
         }}
       ></input>
-      <label for="Score"> Score:</label>
+      <label htmlFor="Score"> Score:</label>
       <input
-        class="input-boxes score-box"
+        className="input-boxes score-box"
         type="text"
         onChange={(e) => {
           handleScore(e);
         }}
       ></input>
-      <label for="OutOf"> out of </label>
+      <label htmlFor="OutOf"> out of </label>
       <input
-        class="input-boxes score-box"
+        className="input-boxes score-box"
         type="text"
         onChange={(e) => {
           handleOutOf(e);
@@ -70,7 +65,7 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
 
       <button
         type="submit"
-        class="submit-score"
+        className="submit-score"
         onClick={() => {
           handleClick();
           handleAddScore();

@@ -28,11 +28,11 @@ function GraphScore({ date, topic, percentageScore, id, handleRenderScores }) {
   let shortenedDate = date.split("").slice(0, 10);
 
   return (
-    <div class="graph-score">
-      <p class="light">{shortenedDate}</p>
-      <p class="dark">{topic}</p>
+    <div className="graph-score">
+      <p className="light">{shortenedDate}</p>
+      <p className="dark">{topic}</p>
       <div
-        class="bar"
+        className="bar"
         style={{
           width: `${divWidth}vw`,
           height: "20px",
@@ -45,7 +45,7 @@ function GraphScore({ date, topic, percentageScore, id, handleRenderScores }) {
         }}
       ></div>
       <button
-        class="delete-button dark"
+        className="delete-button dark"
         onClick={() => {
           handleRenderScores();
           handleClick();
