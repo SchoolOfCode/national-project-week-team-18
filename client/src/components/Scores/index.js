@@ -22,11 +22,13 @@ function Scores({ handleRenderScores, renderScores }) {
   }, [renderScores]);
   return (
     <div>
-      <ScoresHeader scoresArr={scores.payload} />
-      <ScoresTable
-        handleRenderScores={handleRenderScores}
-        scoresArr={scores.payload}
-      />
+      {scores && <ScoresHeader scoresArr={scores.payload} />}
+      {scores && (
+        <ScoresTable
+          handleRenderScores={handleRenderScores}
+          scoresArr={scores.payload}
+        />
+      )}
     </div>
   );
 }
