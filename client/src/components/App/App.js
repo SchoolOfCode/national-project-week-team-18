@@ -7,17 +7,31 @@ import { useState } from "react";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
+  const [renderScores, setRenderScores] = useState(false);
 
   function handleAddScore() {
     setShowForm(!showForm);
+  }
+
+  function handleRenderScores() {
+    setRenderScores(!renderScores);
+    console.log(renderScores);
   }
 
   return (
     <div className="App">
       <body>
         <NavBar handleAddScore={handleAddScore} />
-        {showForm ? <SubmitForm handleAddScore={handleAddScore} /> : null}
-        <Scores />
+        {showForm ? (
+          <SubmitForm
+            handleAddScore={handleAddScore}
+            handleRenderScores={handleRenderScores}
+          />
+        ) : null}
+        <Scores
+          renderScores={renderScores}
+          handleRenderScores={handleRenderScores}
+        />
         <Footer className="footer" />
       </body>
     </div>

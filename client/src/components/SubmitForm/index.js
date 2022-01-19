@@ -1,20 +1,20 @@
 import "./style.css";
 import { useState } from "react";
 
-function SubmitForm({ handleAddScore }) {
+function SubmitForm({ handleAddScore, handleRenderScores }) {
   const [score, setScore] = useState(0);
   const [outOf, setOutOf] = useState(0);
   const [topic, setTopic] = useState("");
   const [submit, setSubmit] = useState({ Topic: "", Score: 0, OutOf: 0 });
 
   function handleClick() {
-    setSubmit({
-      topic: topic,
-      score: score,
-      outOf: outOf,
-      percentage: score / outOf,
-    });
-    return console.log(submit);
+    // setSubmit({
+    //   topic: topic,
+    //   score: score,
+    //   outOf: outOf,
+    //   percentage: score / outOf,
+    // });
+    // return console.log(submit);
     //post results to db
   }
 
@@ -65,6 +65,7 @@ function SubmitForm({ handleAddScore }) {
         onClick={() => {
           handleClick();
           handleAddScore();
+          handleRenderScores();
         }}
       >
         Submit Score

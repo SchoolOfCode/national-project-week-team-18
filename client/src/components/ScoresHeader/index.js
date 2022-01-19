@@ -17,7 +17,7 @@ function ScoresHeader({ scoresArr }) {
       // console.log(arr, sum);
       return Math.floor(sum / arr.length);
     });
-  }, [scoresArr]);
+  }, []);
 
   return (
     <div>
