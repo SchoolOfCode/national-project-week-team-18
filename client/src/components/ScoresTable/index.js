@@ -30,7 +30,7 @@ function ScoresTable({ scoresArr, handleRenderScores }) {
           <p>90</p>
           <p>100</p>
         </div>
-        <p className="dark">Delete</p>
+        <p className="dark"></p>
       </div>
       <div class="scores">
         {scoresArr.map(({ date, topic, score, outof, id }) => {

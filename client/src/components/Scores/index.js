@@ -8,7 +8,7 @@ function Scores({ handleRenderScores, renderScores }) {
 
   const getScores = async () => {
     try {
-      const res = await fetch("https://quiztrackerapp.herokuapp.com/scores");
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/scores`);
 
       const scoresData = await res.json();
 

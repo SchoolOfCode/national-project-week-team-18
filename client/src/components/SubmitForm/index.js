@@ -10,7 +10,7 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
     console.log("post called");
     try {
       const addScore = { topic, score, outOf };
-      const res = await fetch("https://quiztrackerapp.herokuapp.com/scores", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/scores`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(addScore),
@@ -73,6 +73,9 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
         }}
       >
         Submit Score
+      </button>
+      <button className="cancel-submit" onClick={handleAddScore}>
+        Cancel
       </button>
     </div>
   );
