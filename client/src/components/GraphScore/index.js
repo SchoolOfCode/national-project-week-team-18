@@ -36,7 +36,12 @@ function GraphScore({ date, topic, percentageScore, id, handleRenderScores }) {
         style={{
           width: `${divWidth}vw`,
           height: "20px",
-          backgroundColor: "#4C8CBD",
+          backgroundColor:
+            percentageScore >= 75
+              ? "#4C8CBD"
+              : percentageScore >= 50
+              ? "#2B2D42"
+              : "#EF233C",
         }}
       ></div>
       <button
