@@ -5,18 +5,7 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
   const [score, setScore] = useState(0);
   const [outOf, setOutOf] = useState(0);
   const [topic, setTopic] = useState("");
-  const [submit, setSubmit] = useState({ Topic: "", Score: 0, OutOf: 0 });
-
-  function handleClick() {
-    // setSubmit({
-    //   topic: topic,
-    //   score: score,
-    //   outOf: outOf,
-    //   percentage: score / outOf,
-    // });
-    // return console.log(submit);
-    //post results to db
-  }
+  //const [submit, setSubmit] = useState({ Topic: "", Score: 0, OutOf: 0 });
 
   function handleTopic(e) {
     setTopic(e.target.value);
@@ -30,7 +19,7 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
     setOutOf(e.target.value);
   }
 
-  const handleAddScores = async(e) => {
+  const handleClick = async(e) => {
     //e.preventDefault();
     try {
       const addScore = {topic, score, outOf}
@@ -40,6 +29,7 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
         body: JSON.stringify(addScore)
     
       })
+      //console.log(addScore)
       window.location ="/"
       
     } catch (err) {
@@ -83,7 +73,6 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
         onClick={() => {
           handleClick();
           handleAddScore();
-          handleAddScores()
           handleRenderScores();
         }}
       >
