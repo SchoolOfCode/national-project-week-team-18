@@ -14,7 +14,7 @@ function App() {
   }
 
   function handleRenderScores() {
-    setRenderScores(!renderScores);
+    setTimeout(setRenderScores, 500, !renderScores);
     console.log(renderScores);
   }
 
