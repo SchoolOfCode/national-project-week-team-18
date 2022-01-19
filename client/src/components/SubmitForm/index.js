@@ -30,29 +30,47 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
     setOutOf(e.target.value);
   }
 
+  const handleAddScores = async(e) => {
+    //e.preventDefault();
+    try {
+      const addScore = {topic, score, outOf}
+      const res = await fetch("https://quiztrackerapp.herokuapp.com/scores",{
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(addScore)
+    
+      })
+      window.location ="/"
+      
+    } catch (err) {
+      console.error(err.message)
+      
+    }
+  }
+
   return (
-    <div class="submit-form">
-      <label for="topic" class="left">
+    <div className="submit-form">
+      <label htmlFor="topic" className="left">
         Topic:
       </label>
       <input
-        class="input-boxes left"
+        className="input-boxes left"
         type="text"
         onChange={(e) => {
           handleTopic(e);
         }}
       ></input>
-      <label for="Score"> Score:</label>
+      <label htmlFor="Score"> Score:</label>
       <input
-        class="input-boxes score-box"
+        className="input-boxes score-box"
         type="text"
         onChange={(e) => {
           handleScore(e);
         }}
       ></input>
-      <label for="OutOf"> out of </label>
+      <label htmlFor="OutOf"> out of </label>
       <input
-        class="input-boxes score-box"
+        className="input-boxes score-box"
         type="text"
         onChange={(e) => {
           handleOutOf(e);
@@ -61,10 +79,11 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
 
       <button
         type="submit"
-        class="submit-score"
+        className="submit-score"
         onClick={() => {
           handleClick();
           handleAddScore();
+          handleAddScores()
           handleRenderScores();
         }}
       >
