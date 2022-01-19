@@ -1,13 +1,12 @@
 import './style.css'
 
-function GraphScore({ date, topic, percentageScore, key }) {
-
+function GraphScore({ date, topic, percentageScore, id }) {
   let divWidth = percentageScore * 0.5
 
   async function deleteItem() {
-    console.log('id', key)
+    console.log('id', id)
     const response = await fetch(
-      `https://quiztrackerapp.herokuapp.com/scores/${key}`,
+      `https://quiztrackerapp.herokuapp.com/scores/${id}`,
       {
         method: 'DELETE',
         headers: {
@@ -26,18 +25,18 @@ function GraphScore({ date, topic, percentageScore, key }) {
     console.log('response', res)
   }
 
-  let shortenedDate = date.split("").slice(0, 10);
+  let shortenedDate = date.split('').slice(0, 10)
 
   return (
-    <div class="graph-score">
-      <p class="light">{shortenedDate}</p>
-      <p class="dark">{topic}</p>
+    <div class='graph-score'>
+      <p class='light'>{shortenedDate}</p>
+      <p class='dark'>{topic}</p>
       <div
-        class="bar"
+        class='bar'
         style={{
           width: `${divWidth}vw`,
-          height: "20px",
-          backgroundColor: "#4C8CBD",
+          height: '20px',
+          backgroundColor: '#4C8CBD',
         }}
       ></div>
       <button class='delete-button dark' onClick={handleClick}>

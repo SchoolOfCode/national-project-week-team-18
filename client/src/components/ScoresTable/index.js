@@ -1,23 +1,23 @@
-import "./style.css";
-import GraphScore from "../GraphScore";
+import './style.css'
+import GraphScore from '../GraphScore'
 
 function ScoresTable({ scoresArr }) {
   return (
-    <div className="table-container">
-      <div class="grid-container">
-        <div className="light"></div>
-        <div className="dark"></div>
-        <div className="light">
+    <div className='table-container'>
+      <div class='grid-container'>
+        <div className='light'></div>
+        <div className='dark'></div>
+        <div className='light'>
           <p>Scores (%)</p>
         </div>
-        <div class="dark"></div>
-        <div className="light">
+        <div class='dark'></div>
+        <div className='light'>
           <p>Date</p>
         </div>
-        <div className="dark">
+        <div className='dark'>
           <p>Topic</p>
         </div>
-        <div className="numbers light">
+        <div className='numbers light'>
           <p>0</p>
           <p>10</p>
           <p>20</p>
@@ -30,22 +30,23 @@ function ScoresTable({ scoresArr }) {
           <p>90</p>
           <p>100</p>
         </div>
-        <p className="dark">Delete</p>
+        <p className='dark'>Delete</p>
       </div>
-      <div class="scores">
+      <div class='scores'>
         {scoresArr.map(({ date, topic, percentage, id }) => {
           return (
             <GraphScore
               key={id}
+              id={id}
               date={date}
               topic={topic}
               percentageScore={percentage}
             />
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }
 
-export default ScoresTable;
+export default ScoresTable
