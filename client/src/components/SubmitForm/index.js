@@ -1,5 +1,5 @@
 import "./style.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function SubmitForm({ handleAddScore, handleRenderScores }) {
   const [score, setScore] = useState(0);
@@ -9,7 +9,7 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
   async function handleClick() {
     console.log("post called");
     try {
-      const addScore = { topic, score, outOf, percentage };
+      const addScore = { topic, score, outOf };
       const res = await fetch("https://quiztrackerapp.herokuapp.com/scores", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
