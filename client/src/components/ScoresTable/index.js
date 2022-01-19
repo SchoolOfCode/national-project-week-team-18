@@ -3,7 +3,7 @@ import GraphScore from "../GraphScore";
 
 function ScoresTable({ scoresArr }) {
   return (
-    <div>
+    <div className="table-container">
       <div class="grid-container">
         <div className="light"></div>
         <div className="dark"></div>
@@ -33,13 +33,13 @@ function ScoresTable({ scoresArr }) {
         <p className="dark">Delete</p>
       </div>
       <div class="scores">
-        {scoresArr.map(({ date, topic, percentageScore, id }) => {
+        {scoresArr.map(({ date, topic, percentage, id }) => {
           return (
             <GraphScore
               key={id}
               date={date}
               topic={topic}
-              percentageScore={percentageScore}
+              percentageScore={percentage}
             />
           );
         })}
