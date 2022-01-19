@@ -1,12 +1,29 @@
-import "./style.css";
+import './style.css'
 
 function GraphScore({ date, topic, percentageScore, key }) {
-  let divWidth = percentageScore * 0.5;
 
-  function handleClick() {
-    console.log("You clicked delete");
-    //take in id of delete button pressed
-    //send delte request to API with that id
+  let divWidth = percentageScore * 0.5
+
+  async function deleteItem() {
+    console.log('id', key)
+    const response = await fetch(
+      `https://quiztrackerapp.herokuapp.com/scores/${key}`,
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '',
+        },
+      }
+    )
+
+    const data = await response.json()
+    return data
+  }
+  async function handleClick() {
+    console.log('You clicked delete')
+    const res = await deleteItem()
+    console.log('response', res)
   }
 
   let shortenedDate = date.split("").slice(0, 10);
@@ -23,11 +40,11 @@ function GraphScore({ date, topic, percentageScore, key }) {
           backgroundColor: "#4C8CBD",
         }}
       ></div>
-      <button class="delete-button dark" onClick={handleClick}>
+      <button class='delete-button dark' onClick={handleClick}>
         X
       </button>
     </div>
-  );
+  )
 }
 
-export default GraphScore;
+export default GraphScore
