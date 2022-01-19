@@ -11,9 +11,9 @@
 .delete-button {
   position: relative;
   top: 5px;
-  left: 60px;
+  left: 35px;
   height: 30px;
-  width: 30px;
+  width: 50%;
   background-color: #ef233c;
   color: white;
   border-style: none;

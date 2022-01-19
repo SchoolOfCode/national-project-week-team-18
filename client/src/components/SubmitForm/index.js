@@ -74,6 +74,9 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
       >
         Submit Score
       </button>
+      <button className="cancel-submit" onClick={handleAddScore}>
+        Cancel
+      </button>
     </div>
   );
 }

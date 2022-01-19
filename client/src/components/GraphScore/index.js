@@ -51,7 +51,7 @@ function GraphScore({ date, topic, percentageScore, id, handleRenderScores }) {
           handleClick();
         }}
       >
-        X
+        Delete
       </button>
     </div>
   );
