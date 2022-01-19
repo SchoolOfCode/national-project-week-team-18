@@ -2,14 +2,11 @@ import "./style.css";
 import logo from "../../Logo.png";
 import UserIcon from "../../UserIcon.png";
 
-function NavBar() {
-  function addScore() {
-    console.log("Add score button pressed");
-  }
+function NavBar({ handleAddScore }) {
   return (
     <div className="navBar">
       <img src={logo} alt="logo" className="logo" />
-      <button onClick={addScore} className="add-score-button right">
+      <button onClick={handleAddScore} className="add-score-button right">
         Add Score
       </button>
       <img src={UserIcon} alt="User Icon" className="usericon right" />
