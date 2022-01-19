@@ -9,9 +9,11 @@ function GraphScore({ date, topic, percentageScore, key }) {
     //send delte request to API with that id
   }
 
+  let shortenedDate = date.split("").slice(0, 10);
+
   return (
     <div class="graph-score">
-      <p class="light">{date}</p>
+      <p class="light">{shortenedDate}</p>
       <p class="dark">{topic}</p>
       <div
         class="bar"
