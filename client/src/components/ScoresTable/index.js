@@ -33,7 +33,7 @@ function ScoresTable({ scoresArr, handleRenderScores }) {
         <p className="dark">Delete</p>
       </div>
       <div class="scores">
-        {scoresArr.map(({ date, topic, percentage, id }) => {
+        {scoresArr.map(({ date, topic, score, outof, id }) => {
           return (
             <GraphScore
               handleRenderScores={handleRenderScores}
@@ -41,7 +41,7 @@ function ScoresTable({ scoresArr, handleRenderScores }) {
               id={id}
               date={date}
               topic={topic}
-              percentageScore={percentage}
+              percentageScore={(score / outof) * 100}
             />
           );
         })}
