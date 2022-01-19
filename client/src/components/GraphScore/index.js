@@ -1,6 +1,7 @@
 import './style.css'
 
 function GraphScore({ date, topic, percentageScore, key }) {
+
   let divWidth = percentageScore * 0.5
 
   async function deleteItem() {
@@ -25,16 +26,18 @@ function GraphScore({ date, topic, percentageScore, key }) {
     console.log('response', res)
   }
 
+  let shortenedDate = date.split("").slice(0, 10);
+
   return (
-    <div class='graph-score'>
-      <p class='light'>{date}</p>
-      <p class='dark'>{topic}</p>
+    <div class="graph-score">
+      <p class="light">{shortenedDate}</p>
+      <p class="dark">{topic}</p>
       <div
-        class='bar light'
+        class="bar"
         style={{
           width: `${divWidth}vw`,
-          height: '20px',
-          backgroundColor: {},
+          height: "20px",
+          backgroundColor: "#4C8CBD",
         }}
       ></div>
       <button class='delete-button dark' onClick={handleClick}>
