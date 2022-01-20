@@ -1,7 +1,7 @@
 import "./style.css";
 
 function GraphScore({ date, topic, percentageScore, id, handleRenderScores }) {
-  let divWidth = percentageScore * 0.5;
+  let divWidth = percentageScore * 0.55;
 
   async function deleteItem() {
     console.log("id", id);

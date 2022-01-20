@@ -4,7 +4,10 @@ function Footer() {
   return (
     <footer>
       <p className="credits">
-        Created by Ted Phillips, Najma Diiriye, Simon Prato & Mary Chukwuma
+        Created by <a href="https://github.com/TedPhillips1">Ted Phillips</a>,{" "}
+        <a href="https://github.com/Najmadiiriye">Najma Diiriye</a>,{" "}
+        <a href="https://github.com/SimonPrato11">Simon Prato</a> &{" "}
+        <a href="https://github.com/Marydez57">Mary Chukwuma</a>.
       </p>
     </footer>
   );

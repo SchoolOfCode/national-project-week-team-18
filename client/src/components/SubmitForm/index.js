@@ -14,6 +14,11 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(addScore),
       });
+      if ((res.payload = null)) {
+        alert(
+          "An error was found. Please make sure that the topic contains between 1-20 characters and the score is a number."
+        );
+      }
 
       window.location = "/";
     } catch (err) {
