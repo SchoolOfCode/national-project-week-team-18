@@ -15,9 +15,9 @@ function ScoresHeader({ scoresArr, renderScores }) {
         return acc + cur;
       }, 0);
       // console.log(arr, sum);
-      return Math.floor(sum / arr.length);
+      return Math.floor(sum / arr.length).toString();
     });
-  }, [scoresArr]);
+  }, [scoresArr, renderScores]);
 
   return (
     <div>
