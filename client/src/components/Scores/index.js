@@ -22,7 +22,9 @@ function Scores({ handleRenderScores, renderScores }) {
   }, [renderScores]);
   return (
     <div>
-      {scores && <ScoresHeader scoresArr={scores.payload} />}
+      {scores && (
+        <ScoresHeader renderScores={renderScores} scoresArr={scores.payload} />
+      )}
       {scores && (
         <ScoresTable
           handleRenderScores={handleRenderScores}

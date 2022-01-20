@@ -7,7 +7,6 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
   const [topic, setTopic] = useState("");
 
   async function handleClick() {
-    console.log("post called");
     try {
       const addScore = { topic, score, outOf };
       const res = await fetch(`${process.env.REACT_APP_API_URL}/scores`, {
@@ -19,6 +18,9 @@ function SubmitForm({ handleAddScore, handleRenderScores }) {
       window.location = "/";
     } catch (err) {
       console.error(err.message);
+      return alert(
+        "An error was found. Please make sure that the topic contains between 1-20 characters and the score is a number."
+      );
     }
   }
 
