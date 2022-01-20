@@ -2,7 +2,7 @@ import "./style.css";
 
 import { useState, useEffect } from "react";
 
-function ScoresHeader({ scoresArr }) {
+function ScoresHeader({ scoresArr, renderScores }) {
   const [averageScore, setAverageScore] = useState(0);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ function ScoresHeader({ scoresArr }) {
       // console.log(arr, sum);
       return Math.floor(sum / arr.length);
     });
-  }, []);
+  }, [scoresArr]);
 
   return (
     <div>
