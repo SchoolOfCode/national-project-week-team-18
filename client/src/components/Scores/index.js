@@ -3,7 +3,7 @@ import ScoresHeader from "../ScoresHeader";
 import ScoresTable from "../ScoresTable";
 import "./style.css";
 
-function Scores({ handleRenderScores, renderScores }) {
+function Scores({ handleRenderScores, renderScores}) {
   const [scores, setScores] = useState(null);
 
   const getScores = async () => {
@@ -23,7 +23,10 @@ function Scores({ handleRenderScores, renderScores }) {
   return (
     <div>
       {scores && (
-        <ScoresHeader renderScores={renderScores} scoresArr={scores.payload} />
+        <ScoresHeader 
+        renderScores={renderScores} 
+        scoresArr={scores.payload} 
+        />
       )}
       {scores && (
         <ScoresTable
