@@ -2,6 +2,7 @@ import "./style.css";
 import GraphScore from "../GraphScore";
 
 function ScoresTable({ scoresArr, handleRenderScores }) {
+  console.log(scoresArr);
   return (
     <div className="table-container">
       <div className="grid-container">
